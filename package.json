@@ -1,0 +1,20 @@
+{
+  "name": "x-ray-request",
+  "version": "0.0.1",
+  "description": "request driver for x-ray",
+  "keywords": [],
+  "author": "Charles Bourasseau <charles.bourasseau@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:cbou/x-ray-request.git"
+  },
+  "dependencies": {
+    "request": "^2.53.0"
+  },
+  "devDependencies": {
+    "x-ray": "^1.0.3",
+    "mocha": "*",
+	"iconv": "^2.1.6"
+  },
+  "main": "index"
+}
