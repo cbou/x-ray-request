@@ -39,16 +39,16 @@ var xray = require('x-ray'),
 	request = require('./index.js'),
 	Iconv  = require('iconv').Iconv;
 	
-	var iconv = new Iconv('Windows-1252', 'UTF-8');
+var iconv = new Iconv('Windows-1252', 'UTF-8');
 	
-	var driver = request({
-		requestOptions: {
-			encoding: null,
-		},
-		bodyProcessor: function(body, callback) {
-			callback(iconv.convert(body).toString());
-		}
-	});
+var driver = request({
+	requestOptions: {
+		encoding: null,
+	},
+	bodyProcessor: function(body, callback) {
+		callback(iconv.convert(body).toString());
+	}
+});
 	
 xray('http://example.com/non-utf-8-page')
 	.select({
